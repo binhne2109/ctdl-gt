@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flashcards - Ứng dụng</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Flashcards</h1>
+      <p class="subtitle">Học từ vựng nhanh — lật thẻ, thêm, xóa, lưu.</p>
+    </header>
+
+    <section class="center">
+      <div class="card-scene">
+        <div id="card" class="card-flip">
+          <div class="face front" id="front">(chưa có thẻ)</div>
+          <div class="face back" id="back"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev" class="btn ghost">⟨ Trước</button>
+        <button id="flip" class="btn primary">Lật</button>
+        <button id="next" class="btn ghost">Sau ⟩</button>
+        <button id="del" class="btn danger">Xóa</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="add">
+        <h3>Thêm thẻ mới</h3>
+        <input id="newFront" placeholder="Mặt trước" />
+        <input id="newBack" placeholder="Mặt sau" />
+        <button id="addBtn" class="btn primary full">Thêm</button>
+      </div>
+
+      <div class="list">
+        <h3>Danh sách</h3>
+        <ul id="list"></ul>
+      </div>
+    </aside>
+
+    <script src="/static/main.js"></script>
+  </main>
+</body>
+</html>
